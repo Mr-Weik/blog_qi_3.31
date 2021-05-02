@@ -22,24 +22,24 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `t_blog`;
 CREATE TABLE `t_blog` (
-  `id` bigint NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) DEFAULT NULL,
-  `content` text,
-  `first_picture` varchar(255) DEFAULT NULL,
-  `flag` varchar(255) DEFAULT NULL,
-  `views` int DEFAULT NULL,
-  `appreciation` int NOT NULL DEFAULT '0',
-  `share_statement` int NOT NULL DEFAULT '0',
-  `commentabled` int NOT NULL DEFAULT '0',
-  `published` int NOT NULL DEFAULT '0',
-  `recommend` int NOT NULL DEFAULT '0',
-  `create_time` datetime DEFAULT NULL,
-  `update_time` datetime DEFAULT NULL,
-  `type_id` bigint DEFAULT NULL,
-  `user_id` bigint DEFAULT NULL,
-  `description` text,
-  `tag_ids` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
+                        `id` bigint NOT NULL AUTO_INCREMENT,
+                        `title` varchar(255) DEFAULT NULL,
+                        `content` text,
+                        `first_picture` varchar(255) DEFAULT NULL,
+                        `flag` varchar(255) DEFAULT NULL,
+                        `views` int DEFAULT NULL,
+                        `appreciation` int NOT NULL DEFAULT '0',
+                        `share_statement` int NOT NULL DEFAULT '0',
+                        `commentabled` int NOT NULL DEFAULT '0',
+                        `published` int NOT NULL DEFAULT '0',
+                        `recommend` int NOT NULL DEFAULT '0',
+                        `create_time` datetime DEFAULT NULL,
+                        `update_time` datetime DEFAULT NULL,
+                        `type_id` bigint DEFAULT NULL,
+                        `user_id` bigint DEFAULT NULL,
+                        `description` text,
+                        `tag_ids` varchar(100) DEFAULT NULL,
+                        PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- ----------------------------
@@ -55,10 +55,10 @@ COMMIT;
 -- ----------------------------
 DROP TABLE IF EXISTS `t_blog_tags`;
 CREATE TABLE `t_blog_tags` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `tag_id` bigint DEFAULT NULL,
-  `blog_id` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
+                             `id` int NOT NULL AUTO_INCREMENT,
+                             `tag_id` bigint DEFAULT NULL,
+                             `blog_id` varchar(255) DEFAULT NULL,
+                             PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=83 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- ----------------------------
@@ -91,16 +91,16 @@ COMMIT;
 -- ----------------------------
 DROP TABLE IF EXISTS `t_comment`;
 CREATE TABLE `t_comment` (
-  `id` bigint NOT NULL AUTO_INCREMENT,
-  `nickname` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `content` varchar(255) DEFAULT NULL,
-  `avatar` varchar(255) DEFAULT NULL,
-  `create_time` datetime DEFAULT NULL,
-  `blog_id` bigint DEFAULT NULL,
-  `parent_comment_id` bigint DEFAULT NULL,
-  `admincomment` int DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
+                           `id` bigint NOT NULL AUTO_INCREMENT,
+                           `nickname` varchar(255) DEFAULT NULL,
+                           `email` varchar(255) DEFAULT NULL,
+                           `content` varchar(255) DEFAULT NULL,
+                           `avatar` varchar(255) DEFAULT NULL,
+                           `create_time` datetime DEFAULT NULL,
+                           `blog_id` bigint DEFAULT NULL,
+                           `parent_comment_id` bigint DEFAULT NULL,
+                           `admincomment` int DEFAULT NULL,
+                           PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- ----------------------------
@@ -119,9 +119,9 @@ COMMIT;
 -- ----------------------------
 DROP TABLE IF EXISTS `t_tag`;
 CREATE TABLE `t_tag` (
-  `id` bigint NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
+                       `id` bigint NOT NULL AUTO_INCREMENT,
+                       `name` varchar(255) DEFAULT NULL,
+                       PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- ----------------------------
@@ -141,9 +141,9 @@ COMMIT;
 -- ----------------------------
 DROP TABLE IF EXISTS `t_type`;
 CREATE TABLE `t_type` (
-  `id` bigint NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
+                        `id` bigint NOT NULL AUTO_INCREMENT,
+                        `name` varchar(255) DEFAULT NULL,
+                        PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- ----------------------------
@@ -162,16 +162,16 @@ COMMIT;
 -- ----------------------------
 DROP TABLE IF EXISTS `t_user`;
 CREATE TABLE `t_user` (
-  `id` bigint NOT NULL AUTO_INCREMENT,
-  `nickname` varchar(255) DEFAULT NULL,
-  `username` varchar(255) NOT NULL DEFAULT '',
-  `password` varchar(255) NOT NULL DEFAULT '',
-  `email` varchar(255) DEFAULT NULL,
-  `avatar` varchar(255) DEFAULT NULL,
-  `type` int DEFAULT NULL,
-  `create_time` datetime DEFAULT NULL,
-  `update_time` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
+                        `id` bigint NOT NULL AUTO_INCREMENT,
+                        `nickname` varchar(255) DEFAULT NULL,
+                        `username` varchar(255) NOT NULL DEFAULT '',
+                        `password` varchar(255) NOT NULL DEFAULT '',
+                        `email` varchar(255) DEFAULT NULL,
+                        `avatar` varchar(255) DEFAULT NULL,
+                        `type` int DEFAULT NULL,
+                        `create_time` datetime DEFAULT NULL,
+                        `update_time` datetime DEFAULT NULL,
+                        PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- ----------------------------
