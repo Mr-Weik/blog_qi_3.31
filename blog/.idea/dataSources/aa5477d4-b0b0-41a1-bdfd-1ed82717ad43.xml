@@ -13,7 +13,7 @@
     <schema id="3" parent="1" name="blog">
       <Current>1</Current>
       <Visible>1</Visible>
-      <Collation>latin1_swedish_ci</Collation>
+      <Collation>utf8mb4_bin</Collation>
     </schema>
     <schema id="4" parent="1" name="information_schema">
       <Collation>utf8_general_ci</Collation>
@@ -1181,7 +1181,7 @@
     </column>
     <column id="280" parent="235" name="type">
       <Position>7</Position>
-      <DataType>int(10)|0s</DataType>
+      <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="281" parent="235" name="create_time">
