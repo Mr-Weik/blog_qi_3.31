@@ -10,3 +10,6 @@ springboot项目开发
 springboot,jdk,maven,MD5
 
 
+# update time
+1. 2022-08-23 delete target
+2. update 数据库模式
