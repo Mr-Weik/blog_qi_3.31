@@ -1,8 +1,8 @@
 spring:            #全局配置
   thymeleaf:
-    cache: false
+    cache: True
   profiles:
-    active: pro
+    active: dev
 
 
 comment.avatar: /images/avatar.jpg
